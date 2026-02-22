@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | Creative Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: { primary: '#6366f1' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-500 overflow-hidden">
+
+    <div id="loading-screen" class="fixed inset-0 z-[100] bg-slate-50 dark:bg-slate-950 flex items-center justify-center transition-opacity duration-700">
+        <div class="relative flex items-center justify-center w-40 h-40">
+            <div class="absolute inset-0 rounded-full border-4 border-primary/20 border-t-primary animate-spin"></div>
+            <div class="text-lg font-extrabold tracking-tighter text-primary">Wesly.DEV</div>
+        </div>
+    </div>
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 px-6 py-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass-nav rounded-2xl px-6 py-3">
+            <div class="text-2xl font-extrabold tracking-tighter text-primary">Wesly.DEV</div>
+            
+            <div class="hidden lg:flex gap-8 font-semibold text-sm uppercase tracking-widest">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <button id="theme-toggle" class="p-2.5 rounded-xl bg-white/50 dark:bg-slate-800/50 hover:scale-110 active:scale-95 transition-all shadow-sm">
+                <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-yellow-400"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute top-20 -left-20 w-72 h-72 bg-primary/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-20 -right-20 w-72 h-72 bg-purple-500/20 rounded-full blur-[120px]"></div>
+        
+        <div class="text-center z-10 px-4">
+            <h2 class="text-primary font-bold tracking-[0.3em] mb-4 fade-in">About Me</h2>
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-6">
+                Wesly Fery Wanda <span class="gradient-text">Ambarita</span>
+            </h1>
+            <p class="max-w-xl mx-auto text-slate-600 dark:text-slate-400 text-lg mb-10">
+            Web Developer | Frontend Developer | Backend Developer | Fullstack Developer
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#portfolio" class="btn-primary">See My Projects</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div class="relative inline-block">
+                        <div class="absolute -inset-4 bg-primary/20 rounded-2xl rotate-3"></div>
+                        <img src="wesly.JPG" alt="Me" class="relative rounded-2xl w-full max-w-md object-cover shadow-2xl">
+                    </div>
+                </div>
+                <div class="space-y-8 reveal">
+                    <h2 class="text-4xl font-bold">Building Solutions Through Code</h2>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+                        Aspiring Software Engineer specializing in full-stack web and mobile development. I have a proven track record 
+                of learning and implementing modern frameworks like Laravel and React.js to solve complex problems. 
+                <br><br>
+                As I prepare for my professional career, I am looking for opportunities to contribute to dynamic teams as a Web Developer intern, 
+                where I can apply my technical skills and sense of responsibility to deliver impactful results.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-primary font-bold text-3xl">3.86</h4>
+                            <p class="text-sm font-medium uppercase tracking-wider text-slate-500">GPA</p>
+                        </div>
+                        <div>
+                            <h4 class="text-primary font-bold text-3xl">4</h4>
+                            <p class="text-sm font-medium uppercase tracking-wider text-slate-500">Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-32 bg-slate-100/50 dark:bg-slate-900/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl font-bold mb-4">Tech Stack & Learning Path</h2>
+                <div class="h-1.5 w-20 bg-primary rounded-full mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="p-8 rounded-[2rem] bg-white dark:bg-slate-900 shadow-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="p-3 bg-primary/10 text-primary rounded-xl">
+                            <i data-lucide="code-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Current Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all cursor-default shadow-sm">Java</span>
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all cursor-default shadow-sm">Laravel</span>
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all cursor-default shadow-sm">Database</span>
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all cursor-default shadow-sm">PHP</span>
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all cursor-default shadow-sm">Python</span>
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all cursor-default shadow-sm">Swift</span>
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all cursor-default shadow-sm">React JS</span>
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all cursor-default shadow-sm">Haskell</span>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-[2rem] bg-white dark:bg-slate-900 shadow-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="p-3 bg-primary/10 text-primary rounded-xl">
+                            <i data-lucide="rocket" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Exploring Next</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:border-primary hover:text-primary transition-all cursor-default shadow-sm">Kotlin</span>
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:border-primary hover:text-primary transition-all cursor-default shadow-sm">Flutter</span>
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:border-primary hover:text-primary transition-all cursor-default shadow-sm">Docker</span>
+                        <span class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-300 hover:border-primary hover:text-primary transition-all cursor-default shadow-sm">Microservices</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-32">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-4xl font-bold mb-4">Experience & Achievements</h2>
+                <div class="h-1.5 w-20 bg-primary rounded-full"></div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="p-8 rounded-[2rem] bg-white dark:bg-slate-900 shadow-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-colors group">
+                    <div class="flex flex-col sm:flex-row items-start gap-6">
+                        <div class="p-4 bg-primary/10 text-primary rounded-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="apple" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-1">Participant, Apple Developer Academy</h3>
+                            <h4 class="text-lg text-primary font-semibold mb-3">@ Infinite Learning</h4>
+                            <p class="text-slate-600 dark:text-slate-400">Selected for the prestigious Apple Developer Academy program, focusing on iOS app development using Swift, design thinking, and professional collaboration to create impactful real-world applications.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-[2rem] bg-white dark:bg-slate-900 shadow-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-colors group">
+                    <div class="flex flex-col sm:flex-row items-start gap-6">
+                        <div class="p-4 bg-primary/10 text-primary rounded-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="cpu" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-1">Head of Research and Technology Division</h3>
+                            <h4 class="text-lg text-primary font-semibold mb-3">Informatics Student Association</h4>
+                            <p class="text-slate-600 dark:text-slate-400">Led the division in designing and executing technology-based programs, fostering student innovation, organizing technical competitions, and coordinating research and development initiatives within the department.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-[2rem] bg-white dark:bg-slate-900 shadow-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-colors group">
+                    <div class="flex flex-col sm:flex-row items-start gap-6">
+                        <div class="p-4 bg-primary/10 text-primary rounded-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="book-open" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-1">Teaching Assistant</h3>
+                            <h4 class="text-lg text-primary font-semibold mb-3">Calculus, Calculus II, & Database</h4>
+                            <p class="text-slate-600 dark:text-slate-400">Responsible for assisting students in understanding course materials, guiding database practicum sessions, and helping lecturers evaluate assignments and exams.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-[2rem] bg-white dark:bg-slate-900 shadow-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-colors group">
+                    <div class="flex flex-col sm:flex-row items-start gap-6">
+                        <div class="p-4 bg-primary/10 text-primary rounded-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="award" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-1">Academic Excellence Scholarship Recipient</h3>
+                            <h4 class="text-lg text-primary font-semibold mb-3">5 Consecutive Semesters</h4>
+                            <p class="text-slate-600 dark:text-slate-400">Awarded an academic achievement scholarship for consistently maintaining excellent academic performance (3.86 GPA) across five consecutive semesters.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-[2rem] bg-white dark:bg-slate-900 shadow-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-colors group">
+                    <div class="flex flex-col sm:flex-row items-start gap-6">
+                        <div class="p-4 bg-primary/10 text-primary rounded-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="medal" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-1">Regional Participant, ONMIPA 2024</h3>
+                            <h4 class="text-lg text-primary font-semibold mb-3">National Olympiad of Mathematics and Natural Sciences</h4>
+                            <p class="text-slate-600 dark:text-slate-400">Represented the institution at the regional level of the prestigious National Olympiad of Mathematics and Natural Sciences (ONMIPA-PT), demonstrating analytical and problem-solving capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-[2rem] bg-white dark:bg-slate-900 shadow-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-colors group">
+                    <div class="flex flex-col sm:flex-row items-start gap-6">
+                        <div class="p-4 bg-primary/10 text-primary rounded-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="trophy" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-1">Finalist, Senior Competitive Programming</h3>
+                            <h4 class="text-lg text-primary font-semibold mb-3">CodeFest-001</h4>
+                            <p class="text-slate-600 dark:text-slate-400">Advanced to the final round of the Senior Competitive Programming competition, showcasing strong algorithmic thinking, data structure mastery, and fast-paced problem-solving skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-32 bg-slate-100/50 dark:bg-slate-900/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4">Portfolio</h2>
+                    <div class="h-1.5 w-20 bg-primary rounded-full"></div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="project-card group">
+                    <div class="overflow-hidden rounded-2xl aspect-video bg-slate-200 dark:bg-slate-800">
+                        <img src="ppkha.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Data App">
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold mb-2">
+                        Career Development and Alumni Relations System of Del Institute of Technology
+                        </h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4">Developed an integrated career development and alumni relations platform for Institut Teknologi Del to streamline job placements, alumni networking, and industry partnerships within a unified digital ecosystem.</p>
+                        <div class="flex gap-3">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card group">
+                    <div class="overflow-hidden rounded-2xl aspect-video bg-slate-200 dark:bg-slate-800">
+                        <img src="cashflow.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="System App">
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold mb-2">Cashflow API Delcom</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4">A robust financial management dashboard powered by the Delcom Cashflow API, built with React and Vite.</p>
+                        <div class="flex gap-3">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="overflow-hidden rounded-2xl aspect-video bg-slate-200 dark:bg-slate-800">
+                        <img src="runova.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="System App">
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold mb-2">Runova</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4">Runova is a professional weight loss application that provides personalized guidance based on user-specific data to help individuals achieve their health goals.</p>
+                        <div class="flex gap-3">
+                            <span class="tech-tag">Swift</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="overflow-hidden rounded-2xl aspect-video bg-slate-200 dark:bg-slate-800">
+                        <img src="game.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="System App">
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold mb-2">Python Game with A* and BFS Search</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4">Developed a Python-based game featuring three difficulty levels, implementing BFS and A* Search algorithms to optimize pathfinding for collecting diamonds and returning to the starting point.</p>
+                        <div class="flex gap-3">
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="glass-nav p-8 md:p-16 rounded-[2rem] text-center border border-white/20 shadow-2xl">
+                <h2 class="text-4xl font-bold mb-6">Ready to get started?</h2>
+                <p class="text-slate-500 mb-10 text-lg">Contact me for a project discussion or just to say hi.</p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <a href="mailto:weslyfery@gmail.com" class="flex items-center gap-3 font-bold text-xl hover:text-primary transition">
+                        <i data-lucide="mail"></i> weslyfery@gmail.com
+                    </a>
+                    <div class="hidden md:block w-px h-8 bg-slate-300 dark:bg-slate-700"></div>
+                    <div class="flex gap-6">
+                        <a href="https://github.com/weslyambaritaa/" class="hover:text-primary transition"><i data-lucide="github"></i></a>
+                        <a href="https://www.linkedin.com/in/wesly-ambarita-056ab7285/" class="hover:text-primary transition"><i data-lucide="linkedin"></i></a>
+                        <a href="https://www.instagram.com/weslyambaritaa/" class="hover:text-primary transition"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Wesly Fery Wanda Ambarita. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Loading Screen Script
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loading-screen');
+            const body = document.body;
+            
+            // Memberi sedikit jeda agar animasi loading terlihat (opsional, bisa dihapus timeoutnya jika ingin langsung hilang)
+            setTimeout(() => {
+                loader.classList.add('opacity-0');
+                // Mengembalikan scrollbar yang disembunyikan saat loading
+                body.classList.remove('overflow-hidden');
+                
+                // Menghapus elemen dari DOM setelah transisi opacity selesai
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 700); // Harus sesuai dengan durasi transisi di CSS (duration-700)
+            }, 500); 
+        });
+    </script>
+</body>
+</html>
